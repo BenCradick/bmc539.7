@@ -1,13 +1,13 @@
 CC = gcc
 CFLAGS = -std=c99
-TARGET = shell
-OBJS = shell.o
+TARGET = mysh
+OBJS = mysh.o
 $(TARGET): $(OBJS)
 	$(CC) -o $(TARGET) $(OBJS)
-shell.o: shell.c
-	$(CC) -c shell.c
+mysh.o: mysh.c
+	$(CC) -c mysh.c
 debug:
-	$(CC)  shell.c -DDEBUG -o $(TARGET)
+	$(CC)  mysh.c -DDEBUG -o $(TARGET)
 
 clean:
 	/bin/rm -f *.o $(TARGET)
